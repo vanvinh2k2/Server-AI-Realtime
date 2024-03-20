@@ -16,7 +16,10 @@ Including another URLconf
 
 from django.urls import path
 from .views import index
+from .ai import search_restaurant_image, suggest_food
 
 urlpatterns = [
     path("index/", index, name="index"),
+    path("api/search-ai/", search_restaurant_image, name="search-ai"),
+    path('api/suggest-food/<uid>/<rid>/', suggest_food, name='suggest-food')
 ]
