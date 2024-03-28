@@ -40,7 +40,9 @@ INSTALLED_APPS = [
     'corsheaders',
 ]
 
-MIDDLEWARE = []
+MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',
+]
 
 ROOT_URLCONF = 'app.urls'
 
@@ -63,6 +65,7 @@ TEMPLATES = [
 CORS_ALLOWED_ORIGINS = [
     'http://localhost:3000',
     'http://localhost:3001',
+    'http://localhost:3002',
 ]
 
 ASGI_APPLICATION = 'app.asgi.application'
